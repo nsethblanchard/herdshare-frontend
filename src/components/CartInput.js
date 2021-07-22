@@ -2,7 +2,7 @@ import React from "react";
 
 class CartInput extends React.Component {
   render() {
-    return <div>CartInput</div>;
+    return <div>Cart Input</div>;
   }
 }
 

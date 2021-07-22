@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import CartsIndex from '../components/CartsIndex';
+import {connect} from 'react-redux'
+import CartsList from '../components/CartsList';
 import CartInput from '../components/CartInput';
 
 
@@ -8,10 +9,18 @@ class CartsContainer extends Component {
         return (
             <div>
                 <CartInput />
-                <CartsIndex />
+                <CartsList />
             </div>
         )
     }
 }
 
-export default CartsContainer;
+const mapStateToProps = (state) => {
+    return {
+        carts: state.carts
+    }
+}
+
+
+
+export default connect(mapStateToProps)(CartsContainer);

@@ -33,7 +33,7 @@ const mapDispatchToProps = (dispatch) => {
 
 
 // using this action creator, we can skip the mapDispatchToProps function and just directly pass in the action creator and update store
-export default connect()(App);
+export default App;
 
 // if you are only updating store and don't need the initial state information, you can use "null" as the first argument
 // gives us access to this.props.fetchCarts()
