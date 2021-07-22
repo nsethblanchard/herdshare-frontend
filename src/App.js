@@ -5,15 +5,10 @@ import { fetchCarts } from './actions/fetchCarts';
 
 class App extends React.Component {
 
-  componentDidMount() {
-   this.props.fetchCarts({type: 'FETCH_CARTS', payload: {quantity: 1}})
-  }
-
-
   render() {
   return (
     <div className="App">
-      App
+      Put App Brilliance Here
     </div>
   );
   }
@@ -36,7 +31,11 @@ const mapDispatchToProps = (dispatch) => {
 
 
 // using this action creator, we can skip the mapDispatchToProps function and just directly pass in the action creator and update store
-export default connect(null, {fetchCarts})(App);
+export default connect()(App);
 
 // if you are only updating store and don't need the initial state information, you can use "null" as the first argument
 // gives us access to this.props.fetchCarts()
+
+// using connect function returns an action object by implicitly calling store.dispatch({type: 'FETCH_CARTS', payload: {quantity: 1}}) "or whatever action object"
+// then sends that action to the store, by way of the reducer.  
+
