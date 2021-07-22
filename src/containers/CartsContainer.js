@@ -1,15 +1,23 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
+
+import { fetchCarts } from '../actions/fetchCarts';
 import CartsList from '../components/CartsList';
 import CartInput from '../components/CartInput';
 
 
 class CartsContainer extends Component {
+
+    componentDidMount() {
+        this.props.fetchCarts()
+    }
+
+
     render() {
         return (
             <div>
                 <CartInput />
-                <CartsList />
+                <CartsList carts={this.props.carts}/>
             </div>
         )
     }
@@ -23,4 +31,4 @@ const mapStateToProps = (state) => {
 
 
 
-export default connect(mapStateToProps)(CartsContainer);
+export default connect(mapStateToProps, {fetchCarts})(CartsContainer);
