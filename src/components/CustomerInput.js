@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+import { addCustomer } from "../actions/addCustomer";
 
 class CustomerInput extends React.Component {
   state = { name: "", email: "", phone: "", city: "" };
@@ -9,10 +11,18 @@ class CustomerInput extends React.Component {
     });
   };
 
+  handleSubmit = (event) => {
+    event.preventDefault();
+    this.props.addCustomer(this.state);
+    this.setState({
+      name: "", email: "", phone: "", city: ""
+    })
+  };
+
   render() {
     return (
       <div>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <h2>New Customer Form</h2>
           <label>Customer Name: </label>
           <input
@@ -50,10 +60,12 @@ class CustomerInput extends React.Component {
             value={this.state.city}
           />
           <br />
+          <br />
+          <input type="submit" value="Create New Customer" />
         </form>
       </div>
     );
   }
 }
 
-export default CustomerInput;
+export default connect(null, { addCustomer })(CustomerInput);

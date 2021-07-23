@@ -4,7 +4,7 @@ const CustomersList = (props) => {
     console.log(props)
     return(
         <div>
-            
+            {/* {props.customers.map(customer => <li key={customer.id}>Name: {customer.name} Email: {customer.email} Phone: {customer.phone} Location: {customer.city}</li> )} */}
         </div>
     )
 }
