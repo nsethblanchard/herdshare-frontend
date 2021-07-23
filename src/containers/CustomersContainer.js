@@ -1,34 +1,30 @@
-import React, { Component } from 'react'
-import {connect} from 'react-redux'
+import React, { Component } from "react";
+import { connect } from "react-redux";
 
-import { fetchCustomers } from '../actions/fetchCustomers';
-import CustomersList from '../components/CustomersList';
-import CustomerInput from '../components/CustomerInput';
-
+import { fetchCustomers } from "../actions/fetchCustomers";
+import CustomersList from "../components/CustomersList";
+import CustomerInput from "../components/CustomerInput";
 
 class CustomersContainer extends Component {
+  componentDidMount() {
+    this.props.fetchCustomers();
+  }
 
-    componentDidMount() {
-        this.props.fetchCustomers()
-    }
-
-
-    render() {
-        return (
-            <div>
-                <CustomerInput />
-                <CustomersList customers={this.props.customers}/>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div>
+        <CustomerInput />
+        <br />
+        <CustomersList customers={this.props.customers} />
+      </div>
+    );
+  }
 }
 
 const mapStateToProps = (state) => {
-    return {
-        customers: state.customers
-    }
-}
+  return {
+    customers: state.customers,
+  };
+};
 
-
-
-export default connect(mapStateToProps, {fetchCustomers})(CustomersContainer);
+export default connect(mapStateToProps, { fetchCustomers })(CustomersContainer);
