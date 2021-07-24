@@ -6,15 +6,16 @@ import CustomersList from "../components/CustomersList";
 import CustomerInput from "../components/CustomerInput";
 
 class CustomersContainer extends Component {
-  componentDidMount() {
-    this.props.fetchCustomers();
+  
+  async componentDidMount() {
+    await this.props.fetchCustomers()
   }
 
   render() {
     return (
       <div>
         <CustomerInput />
-        <br />
+        
         <CustomersList customers={this.props.customers} />
       </div>
     );
@@ -23,7 +24,7 @@ class CustomersContainer extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    customers: state.customers,
+    customers: state.customer.customers,
   };
 };
 

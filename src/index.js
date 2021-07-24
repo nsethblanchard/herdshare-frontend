@@ -10,14 +10,13 @@ import productReducer from './reducers/productReducer'
 
 import App from './App';
 
-
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
-  cart: cartReducer, 
-  customer: customerReducer, 
-  farmer: farmerReducer, 
-  product: productReducer 
+  cart: cartReducer,
+  customer: customerReducer,
+  farmer: farmerReducer,
+  product: productReducer,
 })
 
 let theStore = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))

@@ -2,22 +2,32 @@ import React from 'react';
 import './App.css';
 import {connect} from 'react-redux'
 import { fetchCarts } from './actions/fetchCarts';
-import { fetchCustomers } from './actions/fetchCustomers';
-import CartsContainer from './containers/CartsContainer';
+// import { fetchCustomers } from './actions/fetchCustomers';
+// import CartsContainer from './containers/CartsContainer';
 import CustomersContainer from './containers/CustomersContainer'
-import CustomersList from './components/CustomersList';
+
 
 class App extends React.Component {
-
+  
+  // async componentDidMount(){
+  //   await this.props.fetchCarts()
+  // }
+  
+  
   render() {
-  return (
-    <div className="App">
-      {/* <CartsContainer /> */}
+    return (
+      
+      <div className="App">
+     
       <CustomersContainer />
-      <CustomersList customers={this.fetchCustomers}/>
+      
     </div>
   );
-  }
+}
+}
+
+const mapStateToProps = (state) => {
+  return {carts: state.carts}
 }
 
 export default App;

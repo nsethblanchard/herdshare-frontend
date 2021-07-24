@@ -10,6 +10,8 @@ export const addCustomer = (custFormState) => {
             },
             body: JSON.stringify(custFormState)
         })
+        .then(resp => resp.json())
+        .then(newCust => dispatch({type: 'ADD_CUSTOMER', payload: newCust}))
     }
 
 }
