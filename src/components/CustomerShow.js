@@ -3,9 +3,14 @@ import React from 'react';
 
 const CustomerShow = (props) => {
     
-    return(
+    let customer = props.customers[props.match.params.id - 1]
+
+    return (
         <li>
-            {props.customer.name} - {props.customer.email} - {props.customer.phone} - {props.customer.city}
+            {customer ? customer.name : null} - 
+            {customer ? customer.email : null} - 
+            {customer ? customer.phone : null} - 
+            {customer ? customer.city : null}
         </li>
     )
 
