@@ -6,8 +6,8 @@ import CustomersList from "../components/CustomersList";
 import CustomerInput from "../components/CustomerInput";
 
 class CustomersContainer extends Component {
-  async componentDidMount() {
-    await this.props.fetchCustomers();
+  componentDidMount() {
+    this.props.fetchCustomers();
   }
 
   render() {

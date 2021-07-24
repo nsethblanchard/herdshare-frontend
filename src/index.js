@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {createStore, applyMiddleware, compose, combineReducers} from 'redux';
 import thunk from 'redux-thunk';
 import {Provider} from 'react-redux';
+import {BrowserRouter as Router} from 'react-router-dom';
 import cartReducer from './reducers/cartReducer';
 import customerReducer from './reducers/customerReducer'
 import farmerReducer from './reducers/farmerReducer'
@@ -23,9 +24,9 @@ let theStore = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk))
 
 ReactDOM.render(
   <Provider store={theStore}>
-    <React.StrictMode>
+    <Router>
       <App />
-    </React.StrictMode>
+    </Router>
   </Provider>,
   document.getElementById('root')
 );
