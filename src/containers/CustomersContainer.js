@@ -6,16 +6,16 @@ import CustomersList from "../components/CustomersList";
 import CustomerInput from "../components/CustomerInput";
 
 class CustomersContainer extends Component {
-  
   async componentDidMount() {
-    await this.props.fetchCustomers()
+    await this.props.fetchCustomers();
   }
 
   render() {
     return (
       <div>
         <CustomerInput />
-        
+        <br />
+        <h3>List of Current Customers</h3>
         <CustomersList customers={this.props.customers} />
       </div>
     );
