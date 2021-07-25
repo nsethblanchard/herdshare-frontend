@@ -5,7 +5,7 @@ import {Route, Switch} from 'react-router-dom'
 import { fetchFarmers } from "../actions/fetchFarmers";
 import FarmersList from "../components/FarmersList";
 import FarmerInput from "../components/FarmerInput";
-import Farmershow from "../components/Farmershow";
+import FarmerShow from "../components/FarmerShow";
 
 class FarmersContainer extends Component {
   componentDidMount() {
@@ -19,7 +19,7 @@ class FarmersContainer extends Component {
           {/* Switch will choose the FIRST route that matches the path-this keeps a show page coming up on our new form*/}
           <Route path='/farmers/new' component={FarmerInput}/>
           <br />
-          <Route path='/farmers/:id' render={(routerProps) => <Farmershow {...routerProps} farmers={this.props.farmers} />}/>
+          <Route path='/farmers/:id' render={(routerProps) => <FarmerShow {...routerProps} farmers={this.props.farmers} />}/>
           <br />
           <Route exact path='/farmers' render={(routerProps) => <FarmersList {...routerProps} farmers={this.props.farmers} />}/>
         </Switch>
