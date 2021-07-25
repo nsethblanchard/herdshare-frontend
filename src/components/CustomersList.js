@@ -1,11 +1,15 @@
 import React from 'react';
 import CustomerShow from './CustomerShow';
+import { Route, Link } from 'react-router-dom';
 
 const CustomersList = (props) => {
     return(
         <div>
             {props.customers.map(customer => 
-            <div key={customer.id}><CustomerShow customer={customer}/></div> )}
+            <li key={customer.id}>
+                <Link to={`/customers/${customer.id}`}>{customer.name}</Link>
+            </li> 
+            )}
         </div>
     )
 }
