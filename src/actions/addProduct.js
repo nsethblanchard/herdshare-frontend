@@ -10,7 +10,7 @@ export const addProduct = (prodFormState) => {
             body: JSON.stringify(prodFormState)
         })
         .then(resp => resp.json())
-        .then(newProd => dispatch({type: 'ADD_CUSTOMER', payload: newProd}))
+        .then(newProd => dispatch({type: 'ADD_PRODUCT', payload: newProd}))
     }
 
 }
