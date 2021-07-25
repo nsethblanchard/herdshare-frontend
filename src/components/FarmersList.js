@@ -1,10 +1,15 @@
 import React from 'react';
+import FarmerShow from './FarmerShow';
+import { Route, Link } from 'react-router-dom';
 
 const FarmersList = (props) => {
-    console.log(props)
     return(
         <div>
-            
+            {props.farmers.map(farmer => 
+            <li key={farmer.id}>
+                <Link to={`/farmers/${farmer.id}`}>{farmer.name}</Link>
+            </li> 
+            )}
         </div>
     )
 }
