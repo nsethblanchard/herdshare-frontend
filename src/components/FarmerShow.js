@@ -17,6 +17,7 @@ const FarmersShow = (props) => {
                 {farmer ? farmer.city : null}
             </li>
 
+            <h3>List of Farmer's Current Products</h3>
             <ProductsContainer farmer={farmer} />
         </div>
     )

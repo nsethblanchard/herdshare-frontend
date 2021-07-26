@@ -4,21 +4,19 @@ import {connect} from 'react-redux'
 
 import { fetchProducts } from '../actions/fetchProducts';
 import ProductsList from '../components/ProductsList';
-import ProductInput from '../components/ProductInput';
+// import ProductInput from '../components/ProductInput';
 // import ProductShow from "../components/ProductShow";
 
 class ProductsContainer extends Component {
 
     componentDidMount() {
-        console.log("inside the products Container",this.props)
         this.props.fetchProducts()
     }
-
 
     render() {
         return (
             <div>
-                    <ProductInput/>
+                    {/* <ProductInput/> */}
                     <ProductsList products={this.props.farmer && this.props.farmer.products}/>            
                     {/* <Route path='/products/new' component={ProductInput}/>
                     <br />
