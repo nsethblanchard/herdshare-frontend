@@ -1,11 +1,10 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+// import { Redirect } from 'react-router-dom';
 
 
 const CustomerShow = (props) => {
     
-    let customer = props.customers[props.match.params.id - 1]
-    // this may not work if we delete things and cause the front end ID to not match the backend ID
+    let customer = props.customers.filter(cust => cust.id === parseInt(props.match.params.id))[0]
 
     return (
         <li>

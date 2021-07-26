@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import {Route, Switch} from 'react-router-dom'
+import {Route} from 'react-router-dom'
+// removed Switch from rrdom due to errors
 
 import { fetchFarmers } from "../actions/fetchFarmers";
 import FarmersList from "../components/FarmersList";

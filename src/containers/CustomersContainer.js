@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import {Route, Switch} from 'react-router-dom'
+import {Route} from 'react-router-dom'
+// removed Switch from rrdom import due to errors
 
 import { fetchCustomers } from "../actions/fetchCustomers";
 import CustomersList from "../components/CustomersList";
@@ -15,7 +16,7 @@ class CustomersContainer extends Component {
   render() {
     return (
       <div>
-             {/*tried to use Switch but threw errors  */}
+          {/*tried to use Switch but threw errors  */}
           <Route path='/customers/new' component={CustomerInput}/>
           <br />
           <Route path='/customers/:id' render={(routerProps) => <CustomerShow {...routerProps} customers={this.props.customers} />}/>
