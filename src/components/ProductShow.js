@@ -10,10 +10,10 @@ const ProductShow = (props) => {
     return (
         <li>
 
-            {/* {product ? null : <Redirect to="/products"/>} */}
+            {product ? null : <Redirect to="/products"/>}
             {product ? product.name : null} - 
-            {product ? product.variey : null} - 
-            {product ? product.price : null} - 
+            {product ? product.variety : null} - 
+            {product ? product.price : null}
             
         </li>
     )

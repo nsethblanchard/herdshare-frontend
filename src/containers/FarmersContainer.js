@@ -15,14 +15,13 @@ class FarmersContainer extends Component {
   render() {
     return (
       <div>
-        <Switch>
-          {/* Switch will choose the FIRST route that matches the path-this keeps a show page coming up on our new form*/}
+        
           <Route path='/farmers/new' component={FarmerInput}/>
           <br />
           <Route path='/farmers/:id' render={(routerProps) => <FarmerShow {...routerProps} farmers={this.props.farmers} />}/>
           <br />
           <Route exact path='/farmers' render={(routerProps) => <FarmersList {...routerProps} farmers={this.props.farmers} />}/>
-        </Switch>
+        
       </div>
     );
   }
@@ -30,7 +29,7 @@ class FarmersContainer extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    Farmers: state.farmer.farmers,
+    farmers: state.farmer.farmers,
   };
 };
 
