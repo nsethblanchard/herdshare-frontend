@@ -1,7 +1,8 @@
-export const addProduct = (prodFormState) => {
+export const addProduct = (prodFormState, farmerID) => {
 
     return (dispatch) => {
-        fetch('http://localhost:3000/api/v1/products', {
+        console.log("in addProduct", farmerID)
+        fetch(`http://localhost:3000/api/v1/farmers/${farmerID}/products`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -10,7 +11,10 @@ export const addProduct = (prodFormState) => {
             body: JSON.stringify(prodFormState)
         })
         .then(resp => resp.json())
-        .then(newProd => dispatch({type: 'ADD_PRODUCT', payload: newProd}))
+        .then(newProd => dispatch({type: 'ADD_PRODUCT', payload: newProd})
+        )
     }
 
 }
+
+

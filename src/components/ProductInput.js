@@ -3,9 +3,12 @@ import { connect } from "react-redux";
 import { addProduct } from "../actions/addProduct";
 
 class ProductInput extends React.Component {
-  state = { name: "", variety: "", price: ""};
+  
+  state = { name: "", variety: "", price: "", farmer_id: '' };
+  
 
   handleChange = (event) => {
+    
     this.setState({
       [event.target.name]: event.target.value,
     });
@@ -13,13 +16,18 @@ class ProductInput extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+    this.setState({
+      farmer_id: this.props.farmer.id
+    })
+    console.log('inside product form', this.state)
     this.props.addProduct(this.state);
     this.setState({
-      name: "", variety: "", price: ""
+      name: "", variety: "", price: "", farmer_id: ""
     })
   };
 
   render() {
+    
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
@@ -58,5 +66,6 @@ class ProductInput extends React.Component {
     );
   }
 }
+
 
 export default connect(null, { addProduct })(ProductInput);

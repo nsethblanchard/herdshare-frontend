@@ -3,6 +3,7 @@ import ProductShow from './ProductShow';
 import { Link } from 'react-router-dom';
 
 const ProductsList = (props) => {
+    
     return(
         <div>
             {props.products && props.products.map(product => 

@@ -5,7 +5,7 @@ export default function productReducer(state = {products: []}, action) {
         case 'FETCH_PRODUCTS':
             return {...state, products: action.payload}
         case 'ADD_PRODUCT':
-            return {...state, farmers: [...state.farmers, action.payload]}
+            return {...state, products: [...state.products, action.payload]}
         default:
             return state
     }

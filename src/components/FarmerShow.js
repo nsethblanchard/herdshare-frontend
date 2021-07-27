@@ -3,24 +3,24 @@ import React from 'react';
 import ProductsContainer from '../containers/ProductsContainer'
 
 
-const FarmersShow = (props) => {
+const FarmerShow = (props) => {
     
-    let farmer = props.farmers.filter(farmer => farmer.id === parseInt(props.match.params.id))[0]
+    let theFarmer = props.farmers.filter(farmer => farmer.id === parseInt(props.match.params.id))[0]
 
     return (
         <div>
             <li>
                 {/* {farmer ? null : <Redirect to="/farmers"/>} */}
-                {farmer ? farmer.name : null} - 
-                {farmer ? farmer.email : null} - 
-                {farmer ? farmer.phone : null} - 
-                {farmer ? farmer.city : null}
+                {theFarmer ? theFarmer.name : null} - 
+                {theFarmer ? theFarmer.email : null} - 
+                {theFarmer ? theFarmer.phone : null} - 
+                {theFarmer ? theFarmer.city : null}
             </li>
 
             <h3>List of Farmer's Current Products</h3>
-            <ProductsContainer farmer={farmer} />
+            <ProductsContainer farmer={theFarmer && theFarmer} />
         </div>
     )
 }
 
-export default FarmersShow;
+export default FarmerShow;
