@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import {Route} from 'react-router-dom'
-// removed Switch from rrdom due to errors
+import {Route, Switch} from 'react-router-dom'
 
 import { fetchFarmers } from "../actions/fetchFarmers";
 import FarmersList from "../components/FarmersList";
@@ -16,13 +15,11 @@ class FarmersContainer extends Component {
   render() {
     return (
       <div>
-        
+        <Switch>
           <Route path='/farmers/new' component={FarmerInput}/>
-          <br />
           <Route path='/farmers/:id' render={(routerProps) => <FarmerShow {...routerProps} farmers={this.props.farmers} />}/>
-          <br />
           <Route exact path='/farmers' render={(routerProps) => <FarmersList {...routerProps} farmers={this.props.farmers} />}/>
-        
+          </Switch>
       </div>
     );
   }

@@ -4,7 +4,7 @@ import { addProduct } from "../actions/addProduct";
 
 class ProductInput extends React.Component {
   
-  state = { name: "", variety: "", price: "", farmer_id: '' };
+  state = { name: "", variety: "", price: "" };
   
 
   handleChange = (event) => {
@@ -17,7 +17,7 @@ class ProductInput extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
     this.setState({
-      farmer_id: this.props.farmer.id
+      ...this.state, farmer_id: this.props.farmer.id
     })
     console.log('inside product form', this.state)
     this.props.addProduct(this.state);
