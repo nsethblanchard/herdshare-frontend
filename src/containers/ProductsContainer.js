@@ -8,23 +8,23 @@ import ProductInput from '../components/ProductInput';
 import ProductShow from "../components/ProductShow";
 
 class ProductsContainer extends Component {
-    state = {display: false}
+    // state = {display: false}
 
     componentDidMount() {
         this.props.fetchProducts()
     }
 
-    handleClick = () => {
-        let newBoolean = !this.state.display
-        this.setState({
-          display: newBoolean
-        })
-      }
+    // handleClick = () => {
+    //     let newBoolean = !this.state.display
+    //     this.setState({
+    //       display: newBoolean
+    //     })
+    //   }
 
     render() {
         return (
             <div>
-                <ProductsList products={this.props.farmer && this.props.farmer.products}/> 
+                {/* <ProductsList products={this.props.farmer && this.props.farmer.products}/> 
                 <br/>
                 <br/>
                 <div>
@@ -36,7 +36,7 @@ class ProductsContainer extends Component {
                     <ProductInput products={this.props.farmer && this.props.farmer.products} farmer={this.props.farmer && this.props.farmer}/>
                         :
                     null
-                }
+                } */}
                 
                 <Switch>
                     <Route exact path='/products' render={(routerProps) => <ProductsList {...routerProps} products={this.props.products} />}/>

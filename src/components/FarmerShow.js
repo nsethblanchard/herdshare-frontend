@@ -1,6 +1,8 @@
 import React from 'react';
-// import { Redirect } from 'react-router-dom';
-import ProductsContainer from '../containers/ProductsContainer'
+import { Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import ProductInput from './ProductInput';
+// import ProductsContainer from '../containers/ProductsContainer'
 
 
 const FarmerShow = (props) => {
@@ -16,7 +18,17 @@ const FarmerShow = (props) => {
            
 
             <h3>List of Farmer's Current Products</h3>
-            <ProductsContainer farmer={theFarmer && theFarmer} />
+            {theFarmer && theFarmer.products.map(product => <li key={product.id}>{product.name}</li>)}
+            <br/>
+            
+
+            {/* <ProductsContainer farmer={theFarmer && theFarmer} /> */}
+
+            {/* Style this link as a button */}
+
+            {theFarmer && <Link to={`/farmers/${theFarmer.id}/products/new`}>Add a new Product</Link>}
+
+            <Route path='farmers/:farmer_id/products/new' component={ProductInput}/>            
         </div>
     )
 }

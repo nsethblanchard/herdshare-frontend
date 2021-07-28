@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 const FarmersList = (props) => {
     return(
         <div>
+            <h3>List of all Farmers</h3>
             {props.farmers.map(farmer => 
             <li key={farmer.id}>
                 <Link to={`/farmers/${farmer.id}`}>{farmer.name}</Link>
