@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductShow from './ProductShow';
+// import ProductShow from './ProductShow';
 import { Link } from 'react-router-dom';
 
 const ProductsList = (props) => {

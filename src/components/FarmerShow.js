@@ -9,13 +9,11 @@ const FarmerShow = (props) => {
 
     return (
         <div>
-            <li>
-                {/* {farmer ? null : <Redirect to="/farmers"/>} */}
-                {theFarmer ? theFarmer.name : null} - 
-                {theFarmer ? theFarmer.email : null} - 
-                {theFarmer ? theFarmer.phone : null} - 
-                {theFarmer ? theFarmer.city : null}
-            </li>
+            <h1>Farmer Show Page</h1>
+            <h5>Farmer's Name: {theFarmer ? theFarmer.name : null}</h5>
+            <h5>Farmer's Phone Number: {theFarmer ? theFarmer.phone : null}</h5>
+            <h5>Farmer's Location: {theFarmer ? theFarmer.city : null}</h5>
+           
 
             <h3>List of Farmer's Current Products</h3>
             <ProductsContainer farmer={theFarmer && theFarmer} />

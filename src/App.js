@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import FarmersContainer from './containers/FarmersContainer'
 import CustomersContainer from './containers/CustomersContainer'
-import ProductsContainer from './containers/ProductsContainer';
+// import ProductsContainer from './containers/ProductsContainer';
 
 
 class App extends React.Component {
@@ -11,7 +11,7 @@ class App extends React.Component {
     <div className="App">
       <CustomersContainer />
       <FarmersContainer />
-      <ProductsContainer />
+      
       
     </div>
     );

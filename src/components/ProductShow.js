@@ -10,14 +10,12 @@ const ProductShow = (props) => {
     let product = props.products.filter(product => product.id === parseInt(props.match.params.id))[0]
 
     return (
-        <li>
-
-            {/* {product ? null : <Redirect to="/products"/>} */}
-            {product ? product.name : null} - 
-            {product ? product.variety : null} - 
-            {product ? product.price : null} - 
-            
-        </li>
+        <div>
+            <h1>Product Show Page</h1>
+            <h5>Product's Name: {product ? product.name : null}</h5>
+            <h5>Product's Variety: {product ? product.variety : null}</h5>
+            <h5>Product's Price: {product ? product.price : null}</h5>           
+        </div>
     )
 }
 
