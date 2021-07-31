@@ -1,9 +1,10 @@
 import React from 'react';
 // import CustomerShow from './CustomerShow';
 import { Link } from 'react-router-dom'; 
-// removed Route from rrdom
+
 
 const CustomersList = (props) => {
+    
     return(
         <div>
             <h3>List of all Current Customers</h3>
