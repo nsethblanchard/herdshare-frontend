@@ -20,6 +20,7 @@ class App extends React.Component {
           Here we will put "Welcome" and then maybe map through all farmers and have a user choose who they are...
           <Switch>
             <Route path='/products' component={ProductsList} />
+            
 
           </Switch>        
       </div>
