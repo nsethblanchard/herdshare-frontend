@@ -24,8 +24,14 @@ class FarmersContainer extends Component {
   render() {
     return (
       <div>
-        <FarmersList farmers={this.props.farmers}/>
+        <Switch>
+          <Route path='/farmers/new' component={FarmerInput}/>
+          <Route path='/farmers/:id' render={(routerProps) => <FarmerShow {...routerProps} farmers={this.props.farmers} />}/>
+          <Route exact path='/farmers' render={(routerProps) => <FarmersList {...routerProps} farmers={this.props.farmers} />}/>
+        </Switch>
         
+        <FarmersList farmers={this.props.farmers}/>
+        <br></br>
         <br></br>
         <div>
           <button onClick={this.handleClick}> Add a Farmer </button>
@@ -38,11 +44,6 @@ class FarmersContainer extends Component {
           null
         }
        
-        <Switch>
-          <Route path='/farmers/new' component={FarmerInput}/>
-          <Route path='/farmers/:id' render={(routerProps) => <FarmerShow {...routerProps} farmers={this.props.farmers} />}/>
-          <Route exact path='/farmers' render={(routerProps) => <FarmersList {...routerProps} farmers={this.props.farmers} />}/>
-        </Switch>
       </div>
     );
   }

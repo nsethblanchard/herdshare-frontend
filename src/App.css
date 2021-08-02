@@ -19,3 +19,12 @@ nav {
   align-items: center;
   list-style: none;
 }
+
+.farmer-nav-links {
+  padding: 10px;
+  width: 40%;
+  display: inline;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}

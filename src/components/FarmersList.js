@@ -7,8 +7,10 @@ const FarmersList = (props) => {
         <div>
             <h3>Click on your link or add yourself with the "Add" Button</h3>
             {props.farmers.map(farmer => 
-            <li key={farmer.id}>
-                <Link to={`/farmers/${farmer.id}`}>{farmer.name}</Link>
+            <li className="farmer-nav-links" key={farmer.id}>
+                <Link to={`/farmers/${farmer.id}`}>
+                    <button type="button">{farmer.name}</button>
+                </Link>
             </li> 
             )}
         </div>
