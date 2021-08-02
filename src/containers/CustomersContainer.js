@@ -16,12 +16,12 @@ class CustomersContainer extends Component {
   render() {
     return (
       <div>
-{/*         
+        
           <Switch>
             <Route path='/customers/new' component={CustomerInput}/>
             <Route path='/customers/:id' render={(routerProps) => <CustomerShow {...routerProps} customers={this.props.customers} />}/>
             <Route exact path='/customers' render={(routerProps) => <CustomersList {...routerProps} customers={this.props.customers} />}/>
-          </Switch> */}
+          </Switch>
       </div>
     );
   }

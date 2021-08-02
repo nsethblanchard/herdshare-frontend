@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 import {createStore, applyMiddleware, compose, combineReducers} from 'redux';
 import thunk from 'redux-thunk';
 import {Provider} from 'react-redux';
-import {BrowserRouter as Router} from 'react-router-dom';
-import cartReducer from './reducers/cartReducer';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import customerReducer from './reducers/customerReducer'
 import farmerReducer from './reducers/farmerReducer'
 import productReducer from './reducers/productReducer'
@@ -14,7 +13,6 @@ import App from './App';
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
-  cart: cartReducer,
   customer: customerReducer,
   farmer: farmerReducer,
   product: productReducer,

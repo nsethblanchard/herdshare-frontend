@@ -19,11 +19,11 @@ class ProductsContainer extends Component {
             <div>
                 
                 
-                {/* <Switch>
+                <Switch>
                     <Route exact path='/products' render={(routerProps) => <ProductsList {...routerProps} products={this.props.products} />}/>
                     <Route path='farmers/:farmer_id/products/new' component={ProductInput}/>
                     <Route path='farmers/:farmer_id/products/:id' render={(routerProps) => <ProductShow {...routerProps} products={this.props.products} />}/>  
-                </Switch> */}
+                </Switch>
             </div>
         )
     }
