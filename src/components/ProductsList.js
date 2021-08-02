@@ -1,9 +1,7 @@
 import React from 'react';
-// import ProductShow from './ProductShow';
-// import { Link } from 'react-router-dom';
 
 const ProductsList = (props) => {
-    
+    console.log("Products list")
     return(
         <div>
             <h3>List of all Products</h3>

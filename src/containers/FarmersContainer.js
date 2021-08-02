@@ -8,6 +8,7 @@ import FarmerInput from "../components/FarmerInput";
 import FarmerShow from "../components/FarmerShow";
 
 class FarmersContainer extends Component {
+  
   componentDidMount() {
     this.props.fetchFarmers();
   }
@@ -15,11 +16,14 @@ class FarmersContainer extends Component {
   render() {
     return (
       <div>
-        <Switch>
+        <FarmersList farmers={this.props.farmers}/>
+        <FarmerInput />
+
+        {/* <Switch>
           <Route path='/farmers/new' component={FarmerInput}/>
           <Route path='/farmers/:id' render={(routerProps) => <FarmerShow {...routerProps} farmers={this.props.farmers} />}/>
           <Route exact path='/farmers' render={(routerProps) => <FarmersList {...routerProps} farmers={this.props.farmers} />}/>
-          </Switch>
+        </Switch> */}
       </div>
     );
   }
