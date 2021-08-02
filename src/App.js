@@ -1,11 +1,11 @@
 import React from 'react';
 import Nav from './Nav';
 import './App.css';
-import {BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 
 import Home from './Home';
-// import ProductsList from './components/ProductsList';
-// import CustomersList from './components/CustomersList';
+import ProductsContainer from './containers/ProductsContainer';
+import CustomersContainer from './containers/CustomersContainer';
 
 
 class App extends React.Component {
@@ -13,7 +13,11 @@ class App extends React.Component {
     return (
       <div className="App">
             <Nav />
-            <Route exact path="/" component={Home} />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/products" component={ProductsContainer} />
+              <Route exact path="/customers" component={CustomersContainer} />
+            </Switch>
       </div>
     );
   }

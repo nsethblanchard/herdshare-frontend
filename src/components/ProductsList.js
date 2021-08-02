@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ProductsList = (props) => {
-    console.log("Products list")
+    
     return(
         <div>
             <h3>List of all Products</h3>
