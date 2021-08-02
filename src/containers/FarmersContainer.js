@@ -8,22 +8,41 @@ import FarmerInput from "../components/FarmerInput";
 import FarmerShow from "../components/FarmerShow";
 
 class FarmersContainer extends Component {
-  
+  state = {display: false}
+
   componentDidMount() {
     this.props.fetchFarmers();
+  }
+
+  handleClick = () => {
+    let newBoolean = !this.state.display
+    this.setState({
+      display: newBoolean
+    })
   }
 
   render() {
     return (
       <div>
         <FarmersList farmers={this.props.farmers}/>
-        <FarmerInput />
+        
+        <br></br>
+        <div>
+          <button onClick={this.handleClick}> Add a Farmer </button>
+        </div>
 
-        {/* <Switch>
+        { this.state.display
+            ?
+          <FarmerInput />
+            :
+          null
+        }
+       
+        <Switch>
           <Route path='/farmers/new' component={FarmerInput}/>
           <Route path='/farmers/:id' render={(routerProps) => <FarmerShow {...routerProps} farmers={this.props.farmers} />}/>
           <Route exact path='/farmers' render={(routerProps) => <FarmersList {...routerProps} farmers={this.props.farmers} />}/>
-        </Switch> */}
+        </Switch>
       </div>
     );
   }
