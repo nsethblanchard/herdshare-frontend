@@ -33,16 +33,12 @@ class FarmersContainer extends Component {
         <FarmersList farmers={this.props.farmers}/>
         <br></br>
         <br></br>
+        <h4>If you are new, please create your profile</h4>
         <div>
           <button onClick={this.handleClick}> Add a Farmer </button>
         </div>
 
-        { this.state.display
-            ?
-          <FarmerInput />
-            :
-          null
-        }
+        {this.state.display ? <FarmerInput /> : null}
        
       </div>
     );

@@ -7,9 +7,8 @@ function Home() {
 
     return (
         <div>
-            <h1>Home Screen</h1>
+            <h2>Welcome to Herdshare, please click on your profile</h2>
             <FarmersContainer />
-
         </div>
     );
 }

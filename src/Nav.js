@@ -8,7 +8,7 @@ function Nav() {
 
     return (
         <nav>
-            <h2>Welcome to Herd Share</h2>
+            <h2>Herdshare</h2>
             <ul className="nav-links">
                 <Link style={navStyle} to='/'>
                     <li>Home</li>
