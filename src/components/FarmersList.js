@@ -1,6 +1,5 @@
 import React from 'react';
-import FarmerShow from './FarmerShow';
-import { Link, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const FarmersList = (props) => {
     

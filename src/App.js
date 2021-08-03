@@ -6,8 +6,6 @@ import { Route, Switch } from 'react-router-dom'
 import Home from './Home';
 import ProductsContainer from './containers/ProductsContainer';
 import CustomersContainer from './containers/CustomersContainer';
-import FarmerInput from './components/FarmerInput';
-import FarmersList from './components/FarmersList';
 import FarmerShow from './components/FarmerShow';
 
 
