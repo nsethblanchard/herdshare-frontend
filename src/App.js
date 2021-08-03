@@ -6,6 +6,9 @@ import { Route, Switch } from 'react-router-dom'
 import Home from './Home';
 import ProductsContainer from './containers/ProductsContainer';
 import CustomersContainer from './containers/CustomersContainer';
+import FarmerInput from './components/FarmerInput';
+import FarmersList from './components/FarmersList';
+import FarmerShow from './components/FarmerShow';
 
 
 class App extends React.Component {
@@ -15,8 +18,9 @@ class App extends React.Component {
             <Nav />
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route exact path="/products" component={ProductsContainer} />
-              <Route exact path="/customers" component={CustomersContainer} />
+              <Route exact path="/products" component={ProductsContainer}/>
+              <Route exact path="/customers" component={CustomersContainer}/>
+              <Route path='/farmers/:id' component={FarmerShow}/>
             </Switch>
       </div>
     );

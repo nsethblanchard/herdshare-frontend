@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import ProductInput from './ProductInput';
-// import ProductsContainer from '../containers/ProductsContainer'
+
 
 
 const FarmerShow = (props) => {
+    console.log(props)
+    // let theFarmer = props.farmers.filter(farmer => farmer.id === parseInt(props.match.params.id))[0]
     
-    let theFarmer = props.farmers.filter(farmer => farmer.id === parseInt(props.match.params.id))[0]
-    console.log('inside show?')
     return (
         <div>
             <h1>Farmer Show Page</h1>
