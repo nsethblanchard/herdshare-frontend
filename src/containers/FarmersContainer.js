@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import {Route, Switch} from 'react-router-dom'
 
 import { fetchFarmers } from "../actions/fetchFarmers";
 import FarmersList from "../components/FarmersList";
 import FarmerInput from "../components/FarmerInput";
-import FarmerShow from "../components/FarmerShow";
+
 
 class FarmersContainer extends Component {
   state = {display: false}

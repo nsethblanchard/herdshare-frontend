@@ -1,33 +1,18 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 
 
-
-const FarmerShow = (props) => {
-    console.log(props)
-    // let theFarmer = props.farmers.filter(farmer => farmer.id === parseInt(props.match.params.id))[0]
+const FarmerShow = () => {
+    const location = useLocation()
+    const { farmer } = location.state
     
     return (
         <div>
             <h1>Farmer Show Page</h1>
-            {/* <h5>Farmer's Name: {theFarmer ? theFarmer.name : null}</h5>
-            <h5>Farmer's Phone Number: {theFarmer ? theFarmer.phone : null}</h5>
-            <h5>Farmer's Location: {theFarmer ? theFarmer.city : null}</h5>
-           
-
-            <h3>List of Farmer's Current Products</h3>
-            {theFarmer && theFarmer.products.map(product => <li key={product.id}>{product.name}</li>)}
-            <br/> */}
-            
-
-            {/* <ProductsContainer farmer={theFarmer && theFarmer} /> */}
-
-            {/* Style this link as a button */}
-
-            {/* {theFarmer && <Link to={`/farmers/${theFarmer.id}/products/new`}>Add a new Product</Link>} */}
-
-            {/* <Route path='farmers/:farmer_id/products/new' component={ProductInput}/>             */}
+            <h5>Farmer's Name: {farmer.name}</h5>
+            <h5>Farmer's Phone Number: {farmer.phone}</h5>
+            <h5>Farmer's Location: {farmer.city}</h5>
         </div>
     )
 }
-
 export default FarmerShow;
