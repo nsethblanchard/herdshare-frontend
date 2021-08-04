@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import {Route, Switch} from 'react-router-dom'
-// removed Switch from rrdom import due to errors
+// import {Route, Switch} from 'react-router-dom'
+
 
 import { fetchCustomers } from "../actions/fetchCustomers";
 import CustomersList from "../components/CustomersList";
-import CustomerInput from "../components/CustomerInput";
-import CustomerShow from "../components/CustomerShow";
+// import CustomerInput from "../components/CustomerInput";
+// import CustomerShow from "../components/CustomerShow";
 
 class CustomersContainer extends Component {
   componentDidMount() {
@@ -16,12 +16,7 @@ class CustomersContainer extends Component {
   render() {
     return (
       <div>
-        
-          <Switch>
-            <Route path='/customers/new' component={CustomerInput}/>
-            <Route path='/customers/:id' render={(routerProps) => <CustomerShow {...routerProps} customers={this.props.customers} />}/>
-            <Route exact path='/customers' render={(routerProps) => <CustomersList {...routerProps} customers={this.props.customers} />}/>
-          </Switch>
+        <CustomersList customers={this.props.customers}/>
       </div>
     );
   }

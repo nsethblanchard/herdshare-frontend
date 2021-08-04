@@ -24,14 +24,7 @@ class FarmersContainer extends Component {
     
     return (
       <div>
-        
-        {/* <Switch>
-            <Route path='/farmers/new' component={FarmerInput}/>
-            <Route path='/farmers/:id' render={(routerProps) => <FarmerShow {...routerProps} farmers={this.props.farmers} />}/>
-            <Route exact path='/farmers' render={(routerProps) => <FarmersList {...routerProps} farmers={this.props.farmers}/>}/>
-         </Switch> */}
-        
-        
+                
         <FarmersList farmers={this.props.farmers}/>
         
         <br></br>

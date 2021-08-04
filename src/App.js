@@ -7,6 +7,7 @@ import Home from './Home';
 import ProductsContainer from './containers/ProductsContainer';
 import CustomersContainer from './containers/CustomersContainer';
 import FarmerShow from './components/FarmerShow';
+import CustomerShow from './components/CustomerShow';
 
 
 class App extends React.Component {
@@ -19,6 +20,7 @@ class App extends React.Component {
               <Route exact path="/products" component={ProductsContainer}/>
               <Route exact path="/customers" component={CustomersContainer}/>
               <Route path='/farmers/:id' component={FarmerShow}/>
+              <Route path='/customers/:id' component={CustomerShow}/>
             </Switch>
       </div>
     );
