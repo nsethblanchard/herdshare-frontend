@@ -28,3 +28,9 @@ nav {
   align-items: center;
   list-style: none;
 }
+
+.product-list {
+  text-align: left;
+  padding-left: 200px;
+  list-style-type: none;
+}
