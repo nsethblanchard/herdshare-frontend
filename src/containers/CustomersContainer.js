@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-// import {Route, Switch} from 'react-router-dom'
-
 
 import { fetchCustomers } from "../actions/fetchCustomers";
 import CustomersList from "../components/CustomersList";
-// import CustomerInput from "../components/CustomerInput";
-// import CustomerShow from "../components/CustomerShow";
+import CustomerInput from "../components/CustomerInput";
+
 
 class CustomersContainer extends Component {
   componentDidMount() {
@@ -17,6 +15,8 @@ class CustomersContainer extends Component {
     return (
       <div>
         <CustomersList customers={this.props.customers}/>
+        
+        <CustomerInput />
       </div>
     );
   }
