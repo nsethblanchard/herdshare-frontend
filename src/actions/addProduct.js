@@ -1,8 +1,8 @@
 export const addProduct = (prodFormState, farmerID) => {
 
     return (dispatch) => {
-        console.log("in addProduct", farmerID)
-        fetch(`http://localhost:3000/api/v1/farmers/${farmerID}/products`, {
+        
+        fetch(`http://localhost:3000/api/v1/products`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
