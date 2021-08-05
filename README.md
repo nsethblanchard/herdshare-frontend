@@ -2,7 +2,7 @@
 
 HerdShare (Version 1) is an application designed to assist Farmers with producing an online presence, connecting with a like-minded customer base, and enabling them to show their products.
 
-In order to get access to the back-end API (utilizing rails), please clone [HerdShare Back-end API](https://github.com/nsethblanchard/herdshare-backend-new)
+In order to get access to the back-end API (utilizing Ruby on Rails), please clone [HerdShare Back-end API](https://github.com/nsethblanchard/herdshare-backend-new)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
