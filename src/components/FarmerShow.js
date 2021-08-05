@@ -11,7 +11,7 @@ const FarmerShow = () => {
     return (
         <div>
             <div>
-                <h1>Farmer Show Page</h1>
+                <h1>Farmer Profile Page</h1>
                 <h3>Farmer's Name: {farmer.name}</h3>
                 <h5>Farmer's Phone Number: {farmer.phone}</h5>
                 <h5>Farmer's Location: {farmer.city}</h5>
