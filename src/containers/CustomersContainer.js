@@ -10,8 +10,9 @@ class CustomersContainer extends Component {
   componentDidMount() {
     this.props.fetchCustomers();
   }
-
+  
   render() {
+    
     return (
       <div>
         <CustomersList customers={this.props.customers}/>

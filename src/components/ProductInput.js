@@ -3,10 +3,11 @@ import { connect } from "react-redux";
 import { addProduct } from "../actions/addProduct";
 
 
+
 class ProductInput extends React.Component {
   
   state = { name: "", variety: "", price: "", farmer_id: this.props.farmer.id};
-  
+ 
 
   handleChange = (event) => {
     this.setState({
@@ -64,4 +65,4 @@ class ProductInput extends React.Component {
 }
 
 
-export default connect(null, { addProduct })(ProductInput);
+export default connect(null, {addProduct})(ProductInput);
