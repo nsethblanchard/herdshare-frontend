@@ -1,11 +1,13 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useHistory } from 'react-router-dom';
 import ProductInput from './ProductInput';
 
-const FarmerShow = () => {
+function FarmerShow() {
     const location = useLocation()
     const { farmer } = location.state
 
+    const history = useHistory()
+    console.log("history", history)
     
     
     return (
@@ -31,4 +33,7 @@ const FarmerShow = () => {
         </div>
     )
 }
+
+
+
 export default FarmerShow;

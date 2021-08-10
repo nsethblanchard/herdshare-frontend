@@ -59,23 +59,7 @@ class FarmerInput extends React.Component {
             placeholder="City/State"
             value={this.state.city}
           />
-          {/* <input
-            type="checkbox"
-            name="animal"
-            onChange={this.handleChange}
-            placeholder="City/State"
-            value={this.state.city}
-          />
-          <input
-            type="checkbox"
-            name="plant"
-            onChange={this.handleChange}
-            placeholder="City/State"
-            value={this.state.city}
-          /> */}
-
-          {/* Implement check boxes for booleans */}
-
+          
           <br />
           <br />
           <input type="submit" value="Create New Farmer" />

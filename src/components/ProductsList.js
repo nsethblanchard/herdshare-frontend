@@ -9,7 +9,7 @@ const ProductsList = (props) => {
             </div>
             <div className="product-list">
                 {props.products && props.products.map(product => 
-                
+                    
                 <li key={product.id}>
                     Product Name: {product.name} -- 
                     Type: {product.variety} -- 
