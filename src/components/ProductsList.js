@@ -1,7 +1,6 @@
 import React from 'react';
 
 const ProductsList = (props) => {
-    
     return(
         <div>
             <div>
