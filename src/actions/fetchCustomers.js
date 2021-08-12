@@ -1,5 +1,5 @@
 
-export function fetchCustomers(action) {
+export function fetchCustomers() {
     return (dispatch) => {
      fetch('http://localhost:3000/api/v1/customers')
      .then(resp => resp.json())

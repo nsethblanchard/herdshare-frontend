@@ -10,11 +10,13 @@ import FarmerShow from './components/FarmerShow';
 import CustomerShow from './components/CustomerShow';
 
 
+
 class App extends React.Component {
   render() {
     return (
       <div className="App">
             <Nav />
+            
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/products" component={ProductsContainer}/>

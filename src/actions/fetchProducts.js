@@ -1,6 +1,6 @@
 
 
-export function fetchProducts(action) {
+export function fetchProducts() {
     return (dispatch) => {
      fetch('http://localhost:3000/api/v1/products')
      .then(resp => resp.json())
